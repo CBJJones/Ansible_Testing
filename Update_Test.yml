@@ -1,0 +1,15 @@
+---
+- name: Start Configuration
+  hosts: tag_Name_{{ InventoryName }}
+  serial: '{{ parallelRunCount }}'
+  gather_facts: false
+  
+#InventoryName: APIPRDA
+#parallelRunCount: 100
+  tasks:
+  
+    - name: Run the equivalent of "apt-get update" as a separate step
+      apt:
+        update_cache: yes
+      become: true
+      become_method: sudo
