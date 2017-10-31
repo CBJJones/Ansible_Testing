@@ -4,8 +4,6 @@
   serial: '{{ parallelRunCount }}'
   gather_facts: false
   
-#InventoryName: APIPRDA
-#parallelRunCount: 100
   tasks:
   
     - name: Run the equivalent of "apt-get update" as a separate step
