@@ -1,7 +1,7 @@
 ---
 - name: Start Configuration
-  hosts: '{{ InventoryName }}'
-  serial: '{{ parallelRunCount }}'
+  hosts: all
+  serial: '{{  parallelRunCount }}'
   gather_facts: false
   
   tasks:
