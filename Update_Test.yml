@@ -1,11 +1,9 @@
 ---
 - name: Start Configuration
-  hosts: '{{ InventoryName }}'
+  hosts: all
   serial: '{{ parallelRunCount }}'
   gather_facts: false
-  
   tasks:
-  
     - name: Run the equivalent of "apt-get update" as a separate step
       apt:
         update_cache: yes
