@@ -1,6 +1,6 @@
 ---
 - name: Start Configuration
-  hosts: tag_Name_{{ InventoryName }}
+  hosts: '{{ InventoryName }}'
   serial: '{{ parallelRunCount }}'
   gather_facts: false
   
